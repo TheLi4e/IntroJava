@@ -1,20 +1,18 @@
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
-    /*Task1. Напишите метод, который вернет содержимое текущей папки в виде массива строк.
-Напишите метод, который запишет массив, возвращенный предыдущим методом в файл.
-Обработайте ошибки с помощью try-catch конструкции. В случае возникновения исключения, оно должно записаться в лог-файл.
-*/
-        String dir = System.getProperty("user.dir");
-        String[] filesArray = Lesson2.GetFiles(dir);
-        Lesson2.Task1(filesArray);
-        System.out.println("Список файлов текущего каталога сохранен.");
+    //Task1. Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.push(1);
+        linkedList.push(2);
+        linkedList.push(3);
+        linkedList.push(4);
+        linkedList.push(5);
+        System.out.println("List: " + linkedList);
+        System.out.println("Reversed list: " + Lesson4.Task1(linkedList));
 
-/*Task2. Напишите метод, который определит тип (расширение) файлов из текущей папки и выведет в консоль результат вида
-1 Расширение файла: txt
-2 Расширение файла: pdf
-3 Расширение файла:
-4 Расширение файла: jpg
-*/
-        Lesson2.Task2(filesArray);
+    //Task3. Найдите сумму всех элементов LinkedList, сохраняя все элементы в списке. Используйте итератор
+        System.out.println(Lesson4.Task3(linkedList));
     }
 }
