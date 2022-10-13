@@ -1,23 +1,19 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+
+import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-    //Task1. Пусть дан произвольный список целых чисел, удалить из него четные числа
-        List<Integer> list = new ArrayList();
-        Random random = new Random();
-        for (int i = 0; i < 100; i++) {
-            list.add(random.nextInt(100));
-        }
-        System.out.println(Lesson3.task1(list));
+    //Task1. Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.push(1);
+        linkedList.push(2);
+        linkedList.push(3);
+        linkedList.push(4);
+        linkedList.push(5);
+        System.out.println("List: " + linkedList);
+        System.out.println("Reversed list: " + Lesson4.Task1(linkedList));
 
-    /*Task2.Задан целочисленный список ArrayList. Найти минимальное, максимальное и
-    среднее арифметическое из этого списка. (Collections.max())
-     */
-        List<Integer> list1 = new ArrayList();
-        list1 = Lesson3.task2(list);
-        System.out.println("Максимальное число - "+ list1.get(0) + ", минимальное число - "+list1.get(1)+
-                ", среднее арифметическое списка - "+ list1.get(2));
+    //Task3. Найдите сумму всех элементов LinkedList, сохраняя все элементы в списке. Используйте итератор
+        System.out.println(Lesson4.Task3(linkedList));
     }
 }
