@@ -3,17 +3,29 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) {
-    //Task1. Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.push(1);
-        linkedList.push(2);
-        linkedList.push(3);
-        linkedList.push(4);
-        linkedList.push(5);
-        System.out.println("List: " + linkedList);
-        System.out.println("Reversed list: " + Lesson4.Task1(linkedList));
+    //Task1. Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь несколько телефонов.
+        Phone phone = new Phone();
+        phone.add("1321321312", "Jack");
+        phone.add("1321321311", "Jack");
+        phone.add("1322222112", "Jane");
+        phone.add("111111111111", "John");
+        phone.add("12221333", "James");
+        phone.search("Jack");
+        phone.print();
 
-    //Task3. Найдите сумму всех элементов LinkedList, сохраняя все элементы в списке. Используйте итератор
-        System.out.println(Lesson4.Task3(linkedList));
+     /*Task2. Пусть дан список сотрудников:Иван Иванов, Светлана Петрова, Кристина Белова, Анна Мусина, Анна Крутова,
+     Иван Юрин, Петр Лыков, Павел Чернов, Петр Чернышов, Мария Федорова, Марина Светлова, Мария Савина, Мария Рыкова,
+     Марина Лугова, Анна Владимирова, Иван Мечников, Петр Петин, Иван Ежов. Написать программу, которая найдет и выведет
+     повторяющиеся имена с количеством повторений. Отсортировать по убыванию популярности.
+     */
+        String [] employees = new String[]{"Иван Иванов", "Светлана Петрова", "Кристина Белова",
+                "Анна Мусина", "Анна Крутова", "Иван Юрин", "Петр Лыков",
+                "Павел Чернов", "Петр Чернышов", "Мария Федорова",
+                "Марина Светлова", "Мария Савина", "Мария Рыкова",
+                "Марина Лугова", "Анна Владимирова", "Иван Мечников",
+                "Петр Петин", "Иван Ежов"};
+        var names = Lesson5.task2(employees);
+        System.out.println(names);
+        System.out.println(Lesson5.sortedTask2(names));
     }
 }
