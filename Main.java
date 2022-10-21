@@ -1,31 +1,22 @@
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-    //Task1. Реализуйте структуру телефонной книги с помощью HashMap, учитывая, что 1 человек может иметь несколько телефонов.
-        Phone phone = new Phone();
-        phone.add("1321321312", "Jack");
-        phone.add("1321321311", "Jack");
-        phone.add("1322222112", "Jane");
-        phone.add("111111111111", "John");
-        phone.add("12221333", "James");
-        phone.search("Jack");
-        phone.print();
+        ArrayList<Notebook> notebooks = new ArrayList<Notebook>();
+        Notebook notebook1 = new Notebook("Asus","FA213131", 16,1024,"Windows","MSI 4090");
+        Notebook notebook2 = new Notebook("Acer", "FA213131","Windows");
+        Notebook notebook3 = new Notebook("Lenovo","FA2323", 32,2048,"Linux","Nvidia 2080");
+        Notebook notebook4 = new Notebook("Xioami","2221", 8,1024,"Windows","MSI 3090");
+        Notebook notebook5 = new Notebook("PackardBell","11111", 16,1024,"Linux","Palit 3060");
+        Notebook notebook6 = new Notebook("Apple","3", 32,1024,"MacOS","Radeon 6800XT");
+        notebooks.add(notebook1);
+        notebooks.add(notebook2);
+        notebooks.add(notebook3);
+        notebooks.add(notebook4);
+        notebooks.add(notebook5);
+        notebooks.add(notebook6);
+        Lesson6.task1(notebooks);
 
-     /*Task2. Пусть дан список сотрудников:Иван Иванов, Светлана Петрова, Кристина Белова, Анна Мусина, Анна Крутова,
-     Иван Юрин, Петр Лыков, Павел Чернов, Петр Чернышов, Мария Федорова, Марина Светлова, Мария Савина, Мария Рыкова,
-     Марина Лугова, Анна Владимирова, Иван Мечников, Петр Петин, Иван Ежов. Написать программу, которая найдет и выведет
-     повторяющиеся имена с количеством повторений. Отсортировать по убыванию популярности.
-     */
-        String [] employees = new String[]{"Иван Иванов", "Светлана Петрова", "Кристина Белова",
-                "Анна Мусина", "Анна Крутова", "Иван Юрин", "Петр Лыков",
-                "Павел Чернов", "Петр Чернышов", "Мария Федорова",
-                "Марина Светлова", "Мария Савина", "Мария Рыкова",
-                "Марина Лугова", "Анна Владимирова", "Иван Мечников",
-                "Петр Петин", "Иван Ежов"};
-        var names = Lesson5.task2(employees);
-        System.out.println(names);
-        System.out.println(Lesson5.sortedTask2(names));
     }
 }
